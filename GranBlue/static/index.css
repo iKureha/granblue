@@ -11,7 +11,7 @@
         }
         #all_boss
         {
-            width:300px;
+            width:380px;
             border-collapse:collapse;
         }
         #all_boss th
@@ -25,11 +25,36 @@
             border:1px solid #98bf21;
             padding:3px 7px 2px 7px;
         }
-        #tiamat_div,#colossus_div,#leviathan_div,#yggdrasil_div,#celeste_div,#luminiera_div
+	#tiamat_div
+	{
+	    margin-left:480px;
+	    width:230px;
+	}
+	#colossus_div
+	{
+	    margin-top:-335px;
+	    margin-left:700px;
+	    width:230px;
+	}
+	#leviathan_div
+	{
+	    margin-left:920px;
+	    margin-top:-335px;
+	}
+	#yggdrasil_div
+	{
+ 	    margin-left:480px;
+	    margin-top:30px;
+	}
+	#celeste_div
+	{
+	    margin-left:700px;
+	    margin-top:-335px;
+	}
+        #luminiera_div
         {
-            float:left;
-            margin-left:10px;
-            width:230px;
+            margin-left:920px;
+	    margin-top:-335px;
         }
         #tiamat,#colossus,#leviathan,#yggdrasil,#celeste,#luminiera
         {

@@ -27,16 +27,14 @@ def divide(boss, level, code):
 class GranBlueStreamListener(tweepy.StreamListener):
 
     def on_status(self, status):
-        pattern = r'^.*(\w{8}) :Battle ID\nI need backup!\nLvl (\d{2,3}) (\w+)'
+        pattern = r'^.*(\w{8}) :(Battle ID|参戦ID)\n(I need backup!|参加者募集！)\n(Lvl |Lv)(\d{2,3}) (.+)(https:.+){0,1}'
         matching = re.match(pattern, status.text)
         try:
-            print(matching.group(3), matching.group(2), matching.group(1))
-            divide(matching.group(3), matching.group(2), matching.group(1))
+            print(matching.group(6), matching.group(5), matching.group(1))
+            divide(matching.group(6), matching.group(5), matching.group(1))
         except:
             print("Error")
 
 streamer_listener = GranBlueStreamListener()
 stream = tweepy.Stream(auth=api.auth, listener=streamer_listener)
-stream.filter(track=['Battle ID\nI need backup!\nLvl'])
-
-
+stream.filter(track=['Battle ID\nI need backup!\nLvl', u'参加者募集！'])

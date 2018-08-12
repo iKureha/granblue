@@ -7,7 +7,7 @@ $("document").ready(function(){
                 });
 
                 $("td#copy_to_clipboard").mouseout(function(){
-                    $(this).css({"color":"blue"});
+                    $(this).css({"color":"#808080"});
                     $(this).children().css({"visibility":"hidden"});
                 });
 
@@ -27,7 +27,7 @@ $("document").ready(function(){
                         var level = ret[i].split(",")[1];
                         var code = ret[i].split(",")[2];
                         $('#all_boss').append("<tr><td>" + boss + "</td><td>" + level +
-                        '</td><td id="copy_to_clipboard"><div id="tip" style="position:absolute;visibility:hidden">Double click to copy to clipboard</div>' + code + "</td></tr>");
+                        '</td><td id="copy_to_clipboard" style="color:#808080"><div id="tip" style="position:absolute;visibility:hidden">Double click to copy to clipboard</div>' + code + "</td></tr>");
                     };
                     blue_and_copy();
                 })}
