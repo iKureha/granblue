@@ -2,5 +2,7 @@ boss
 twitterAPIKey.py
 *.bak
 *.db
-db.*
+db.sqlite3
 *.log
+nohup.out
+GranBlueModel.bak/
