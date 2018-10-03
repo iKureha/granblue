@@ -79,6 +79,19 @@ def index(request):
     return render(request, 'index.html', context)
 
 
+def test_page(request):
+    context = {}
+    context['welcome'] = 'This is a testsite!!! '
+    context['all_boss'] = testdb("all boss")
+    context['tiamat'] = testdb("Tiamat")
+    context['leviathan'] = testdb("Leviathan")
+    context['colossus'] = testdb("Colossus")
+    context['yggdrasil'] = testdb("Yggdrasil")
+    context['luminiera'] = testdb("Luminiera")
+    context['celeste'] = testdb("Celeste")
+    return render(request, 'index_test.html', context)
+
+
 def ajax_all_boss(request):
     res = ajax_db("all boss")
     return JsonResponse(res, safe=False)
@@ -112,26 +125,4 @@ def ajax_celeste(request):
 def ajax_luminiera(request):
     res = ajax_db("Luminiera")
     return JsonResponse(res, safe=False)
-
-
-
-# database
-# conn = sqlite3.connect('/Users/wang 1/GranBlue/boss.db')
-# conn = sqlite3.connect('boss.db')
-# print("Linked to SQLite database !")
-# cursor = conn.cursor()
-# cursor.execute('create table tiamat (code varchar(8))')
-# print(cursor.rowcount)
-# sql = 'select id, name, lvl, code from boss order by id desc limit 20'
-# cursor.execute(sql)
-# to_return = []
-# for i in cursor:
-#     # a = i.name + str(i.lvl) + i.code
-#     row = i[1] + '</td><td>' + str(i[2]) + '</td><td id="copy_to_clipboard">' + i[3]
-#     to_return.append(format_html(row))
-
-
-
-
-
 
