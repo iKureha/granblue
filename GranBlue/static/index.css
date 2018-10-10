@@ -1,6 +1,7 @@
         #subtitle
         {
             text-align:right;
+            font-size:9px;
             font-size:2px;
         }
         #all_boss_div
@@ -27,35 +28,43 @@
         }
 	#tiamat_div
 	{
+	    position:absolute;
 	    margin-left:480px;
-	    width:230px;
+	    width:250px;
 	}
 	#colossus_div
 	{
-	    margin-top:-335px;
+	    position:absolute;
 	    margin-left:700px;
-	    width:230px;
+	    width:250px;
 	}
 	#leviathan_div
 	{
+	    position:absolute;
 	    margin-left:920px;
-	    margin-top:-335px;
+	    width:250px;
 	}
 	#yggdrasil_div
 	{
+	    position:absolute;
  	    margin-left:480px;
-	    margin-top:30px;
+	    margin-top:360px;
+	    width:250px;
 	}
 	#celeste_div
 	{
+	    position:absolute;
 	    margin-left:700px;
-	    margin-top:-335px;
+	    margin-top:360px;
+	    width:250px;
 	}
         #luminiera_div
         {
+	    position:absolute;
             margin-left:920px;
-	    margin-top:-335px;
-        }
+	    margin-top:360px;
+	    width:250px;
+	}
         #tiamat,#colossus,#leviathan,#yggdrasil,#celeste,#luminiera
         {
             width:180px;
@@ -139,3 +148,9 @@
             padding:3px 7px 2px 7px;
             background-color:rgb(252,236,186);
         }
+	#tracker
+	{
+	    width:750px;
+	    margin-top:20px;
+	    margin-bottom:20px;
+	}
