@@ -13,5 +13,5 @@ urlpatterns = [
     url(r'^ajax_yggdrasil/$', view.ajax_yggdrasil),
     url(r'^ajax_celeste/$', view.ajax_celeste),
     url(r'^ajax_luminiera/$', view.ajax_luminiera),
-    url(r'^test/$', view.test_page),
+    url(r'^test/$', view.index_test),
 ]
